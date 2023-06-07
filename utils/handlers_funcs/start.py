@@ -13,16 +13,19 @@ async def start(message: Message, command: str):
     if command == 'lowprice':
         await LowPriceState.cities.set()
         await bot.send_message(message.from_user.id, 'Отлично! Вы выбрали поиск недорогих отелей.\n'
+                                                     'К сожалению поиск по России сейчас не доступен:(\n'
                                                      'Введите город для поиска',
                                reply_markup=ReplyKeyboardRemove())
     elif command == 'highprice':
         await HighPriceState.cities.set()
         await bot.send_message(message.from_user.id, 'Отлично! Вы выбрали поиск дорогих отелей.\n'
+                                                     'К сожалению поиск по России сейчас не доступен:(\n'
                                                      'Введите город для поиска',
                                reply_markup=ReplyKeyboardRemove())
     elif command == 'bestdeal':
         await BestDealState.cities.set()
         await bot.send_message(message.from_user.id, 'Отлично! Вы выбрали поиск лучшего предложения.\n'
+                                                     'К сожалению поиск по России сейчас не доступен:(\n'
                                                      'Введите город для поиска',
                                reply_markup=ReplyKeyboardRemove())
 
