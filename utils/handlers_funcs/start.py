@@ -19,7 +19,7 @@ async def start(message: Message, command: str):
     elif command == 'highprice':
         await HighPriceState.cities.set()
         await bot.send_message(message.from_user.id, 'Отлично! Вы выбрали поиск дорогих отелей.\n'
-                                                     'К сожалению поиск по России сейчас не доступен:(\n'
+                                                     'К сожалению поиск по России сейчас не доступен:( \n'
                                                      'Введите город для поиска',
                                reply_markup=ReplyKeyboardRemove())
     elif command == 'bestdeal':
